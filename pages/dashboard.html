@@ -1,0 +1,20 @@
+<div ng-controller="dashboardCtrl">  
+<h1> User Detail Dashboard</h1>
+    <button ng-click="Add()" class="btn pull-right">Add</button>
+    <div class="clearfix"></div>
+     <div  ng-repeat="user in userData">
+         <div class="col-sm-4 text-center">
+             <img ng-src="{{user.avatar}}" ></img>
+             <p> First Name: <b> {{user.first_name}} </b></p>
+             <p> Last Name: <b> {{user.last_name}} </b></p>
+             <div class="row text-center">
+                 <div class="col-sm-6">
+                     <button ng-click="Edit(user.id)" class="btn">Edit</button>
+                 </div>
+                 <div class="col-sm-6">
+                     <button ng-click="Delete(user.id)" class="btn">Delete</button>
+                 </div>
+             </div>
+         </div>         
+    </div>         
+</div>    
